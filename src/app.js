@@ -4,7 +4,7 @@ const MovieDB = require("./utils/movieDB");
 const app = (yargs) => {
   const newMovieDB = new MovieDB();
 
-  if (yargs.action) {
+  if (yargs.action && yargs.action.length > 0) {
     switch (yargs.action) {
       case "add":
         newMovieDB.add(yargs.movie1);
